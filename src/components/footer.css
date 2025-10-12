@@ -1,0 +1,78 @@
+*{
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    letter-spacing: 2px;
+}
+
+footer{
+    padding-bottom: 50px;
+    width: 100%;
+    background-color: #0e0c22;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    left: 0;
+    box-shadow: 0 -2px 6px rgba(0,0,0,0.3);
+}
+
+#footer_content h3{
+    color: #d8d7d6;
+    font-size: 12px;
+}
+
+.footer-link{
+    text-decoration: none;
+}
+
+#footer_contacts h1{
+    margin-bottom: 0.75rem;
+}
+
+#footer_contacts img{
+    font-size: 0.1rem;
+    margin: 0.1rem 0;
+}
+
+#footer_social_media{
+    display: flex;
+    gap: 2rem;
+
+    margin-bottom: 1.5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+#footer_social_media .footer-link{
+    height: 2.5rem;
+    width: 2.5rem;
+    color: #f5f5f5;
+    border-radius: 50%;
+}
+
+#footer_social_media .footer-link i{
+    font-size: 1.25rem;
+}
+
+#footer_social_media .footer-link:hover{
+    opacity: 0.8;
+    transition: all 0.4s ease-in-out;
+}
+
+#linkedin{
+    background-color: #0A66C2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+#github{
+    display: flex;
+    background-color: #2e0342;
+    align-items: center;
+    justify-content: center;
+}

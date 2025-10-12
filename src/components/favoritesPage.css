@@ -1,0 +1,18 @@
+.favorites-page {
+  min-height: 95vh;
+  padding: 30px;
+  color: white;
+}
+
+.favorites-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.empty {
+  text-align: center;
+  margin-top: 30px;
+  color: #bbb;
+}
