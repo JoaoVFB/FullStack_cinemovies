@@ -66,6 +66,23 @@
   animation: fadeIn 0.4s ease;
 }
 
+.error-message {
+  color: #ff4d4f;
+  background-color: #3b3b3b;
+  border-radius: 8px;
+  padding: 10px;
+  margin-top: 8px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.no-results {
+  color: #999;
+  margin-top: 8px;
+  text-align: center;
+}
+
+
 @keyframes fadeIn {
   from {
     opacity: 0;
