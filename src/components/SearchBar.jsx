@@ -11,15 +11,25 @@ function SearchBar() {
   const handleSearch = async (e) => {
     e.preventDefault();
 
-    if (!state.query.trim()) return;
+    // ✅ Validação antes de enviar para a API
+    if (!state.query.trim()) {
+      dispatch({ type: "SEARCH_ERROR", payload: "Por favor, digite o nome de um filme para buscar." });
+      dispatch({ type: "CLEAR_RESULTS" });
+      return;
+    }
 
     dispatch({ type: "SEARCH_START" });
 
     try {
       const movies = await searchMovies(state.query);
-      dispatch({ type: "SEARCH_SUCCESS", payload: movies });
+
+      if (!movies || movies.length === 0) {
+        dispatch({ type: "NO_RESULTS" });
+      } else {
+        dispatch({ type: "SEARCH_SUCCESS", payload: movies });
+      }
     } catch (error) {
-      dispatch({ type: "SEARCH_ERROR", payload: error.message });
+      dispatch({ type: "SEARCH_ERROR", payload: "Erro ao buscar filmes. Tente novamente." });
     }
   };
 
@@ -46,14 +56,14 @@ function SearchBar() {
         </button>
       </form>
 
+      {/* Feedbacks ao usuário */}
       {state.loading && <p>Carregando...</p>}
-      {state.error && <p>Erro: {state.error}</p>}
-
-      
+      {state.error && <p className="error-message">{state.error}</p>}
       {state.noResults && !state.loading && !state.error && (
-        <p className="no-results">Nenhum filme encontrado com este nome </p>
+        <p className="no-results">Nenhum filme encontrado com este nome.</p>
       )}
 
+      {/* Resultados */}
       {Array.isArray(state.results) && state.results.length > 0 && (
         <div className="search-results">
           <h2>Resultados para: "{state.query}"</h2>
