@@ -18,8 +18,8 @@ export function searchReducer(state, action) {
       return { ...state, loading: false, results: [], noResults: true };
     case "SEARCH_ERROR":
       return { ...state, loading: false, error: action.payload, noResults: false };
-    case "CLEAR_RESULTS":
-      return { ...state, results: [], error: "", noResults: false };
+   case "CLEAR_RESULTS":
+      return { ...state, results: [], noResults: false };
     default:
       return state;
   }
