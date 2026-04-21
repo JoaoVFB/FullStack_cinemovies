@@ -1,6 +1,9 @@
 
 # Cine Movies  
 
+<img width="1156" height="871" alt="image" src="https://github.com/user-attachments/assets/4b7e60e6-3d36-44f8-9f2b-aad15e3305fc" />
+
+
 ## 📌 Descrição  
 Este projeto é um **SPA (Single Page Application)** desenvolvido em **React.js**, que consome a [TMDB API](https://developer.themoviedb.org/) para exibir informações sobre filmes e séries.  
 
